@@ -1,0 +1,12 @@
+<h1>Weather Forecast</h1>
+
+<%= form_tag(weather_index_path, method: :get) do %>
+  <label for="zip_code">Enter ZIP Code:</label>
+  <%= text_field_tag :zip_code, params[:zip_code] %>
+  <%= submit_tag 'Get Forecast' %>
+<% end %>
+
+<% if @forecast.present? %>
+  <p><strong>Forecast:</strong> <%= @forecast %></p>
+<% end %>
+
