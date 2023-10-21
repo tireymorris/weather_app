@@ -9,4 +9,7 @@
 <% if @forecast.present? %>
   <p><strong>Forecast:</strong> <%= @forecast %></p>
 <% end %>
+<% if @cached_result.present? %>
+  <p><strong>Forecast retrieved from cache.</strong></p>
+<% end %>
 
