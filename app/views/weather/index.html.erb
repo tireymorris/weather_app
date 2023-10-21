@@ -7,9 +7,21 @@
 <% end %>
 
 <% if @forecast.present? %>
-  <p><strong>Forecast:</strong> <%= @forecast %></p>
-<% end %>
-<% if @cached_result.present? %>
-  <p><strong>Forecast retrieved from cache.</strong></p>
+  <% if @cached_result %>
+    <p><strong>Forecast retrieved from cache.</strong></p>
+  <% end %>
+  <h2>Current Weather:</h2>
+  <p><strong>Forecast:</strong> <%= @forecast['current']['weather'][0]['description'] %></p>
+  <p><strong>Temperature:</strong> <%= @forecast['current']['temp'] %>°F</p>
+  <p><strong>Feels Like:</strong> <%= @forecast['current']['feels_like'] %>°F</p>
+  <p><strong>Humidity:</strong> <%= @forecast['current']['humidity'] %>%</p>
+  <p><strong>UV Index:</strong> <%= @forecast['current']['uvi'] %></p>
+  <p><strong>Wind Speed:</strong> <%= @forecast['current']['wind_speed'] %> mph</p>
+  <p><strong>Wind Direction:</strong> <%= @forecast['current']['wind_deg'] %>°</p>
+  
+  <h2>Daily Forecast:</h2>
+  <p><strong>High Temperature:</strong> <%= @forecast['daily'][0]['temp']['max'] %>°F</p>
+  <p><strong>Low Temperature:</strong> <%= @forecast['daily'][0]['temp']['min'] %>°F</p>
+  
 <% end %>
 
