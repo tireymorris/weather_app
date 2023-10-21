@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Deployment
 
-Things you may want to cover:
+Deployed using the built-in Rails server and Caddy as a reverse proxy, at https://weather.tirey.me
 
-* Ruby version
+## Usage
+`WEATHER_API_KEY=<YOUR_API_KEY> rails server`
 
-* System dependencies
 
-* Configuration
+### Further information
+Everything here should be standard for a Rails app.
+I haven't really done any domain modeling here, just a simple cache on top of the OpenWeatherMap API.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+See `WeatherController` and its corresponding view file for the full implementation.
