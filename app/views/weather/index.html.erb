@@ -6,7 +6,9 @@
   <%= submit_tag 'Get Forecast' %>
 <% end %>
 
-<% if @forecast.present? %>
+<% if @forecast.is_a?(String) %>
+  <p><strong><%= @forecast %></strong></p>
+<% elsif @forecast.present? %>
   <% if @cached_result %>
     <p><strong>Forecast retrieved from cache.</strong></p>
   <% end %>

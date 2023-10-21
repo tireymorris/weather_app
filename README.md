@@ -10,6 +10,6 @@ Deployed using the built-in Rails server and Caddy as a reverse proxy, at https:
 
 ### Further information
 Everything here should be standard for a Rails app.
-I haven't really done any domain modeling here, just a simple cache on top of the OpenWeatherMap API.
+I haven't really done any domain modeling here, just a simple cache on top of the OpenWeatherMap API, which is wrapped in a single controller route.
 
 See `WeatherController` and its corresponding view file for the full implementation.
